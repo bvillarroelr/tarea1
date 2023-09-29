@@ -1,2 +1,7 @@
-package PACKAGE_NAME;public class DocTributario {
+import java.util.Date;
+
+public class DocTributario {
+    private String numero;
+    private String rut;
+    private Date fecha;
 }
