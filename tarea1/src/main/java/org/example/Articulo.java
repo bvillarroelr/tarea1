@@ -1,9 +1,12 @@
+package org.example;
+
 public class Articulo {
     private float peso;
-    private float precio;
     private String nombre;
     private String descripcion;
+    private float precio;
     public Articulo() {
-        ;
+        nombre = new String();
+        descripcion = new String();
     }
 }
