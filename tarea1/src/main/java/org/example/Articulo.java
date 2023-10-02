@@ -9,4 +9,12 @@ public class Articulo {
         nombre = new String();
         descripcion = new String();
     }
+
+    public float getPeso() {
+        return peso;
+    }
+
+    public float getPrecio() {
+        return precio;
+    }
 }
