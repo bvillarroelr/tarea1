@@ -9,7 +9,7 @@ public class OrdenCompra {
         fecha = new Date();
         estado = new String();
     }
-    public float calcPrecioSinIVA(DetalleOrden details) {
+    public float calcPrecioSinIVA() {
         return 0;
     }
     public float calcIVA() {

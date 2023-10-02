@@ -7,7 +7,7 @@ public class DetalleOrden {
     }
     public float calcPrecio(Articulo a) {
         float precio = a.getPrecio() * cantidad;
-        precio = precio * 1.19f; // float o double ? D:
+        precio = precio * 1.19f;
         return precio;
     }
     public float calcPrecioSinIVA(Articulo a) {
@@ -21,5 +21,9 @@ public class DetalleOrden {
     public float calcPeso(Articulo a) {
         float peso = a.getPeso() * this.cantidad;
         return peso;
+    }
+
+    public int getCantidad() {
+        return cantidad;
     }
 }

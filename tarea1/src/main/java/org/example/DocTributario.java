@@ -7,8 +7,8 @@ public class DocTributario {
     private String rut;
     private Date fecha;
     public DocTributario() {
-        numero = new String();
         rut = new String();
+        numero = new String();
         fecha = new Date();
     }
 }

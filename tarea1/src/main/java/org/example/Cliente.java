@@ -3,8 +3,8 @@ package org.example;
 public class Cliente {
     private String nombre;
     private String rut;
-    public Cliente() {
-        nombre = new String();
-        rut = new String();
+    public Cliente(String nombre, String rut) {
+        this.nombre = new String(nombre);
+        this.rut = new String(rut);
     }
 }

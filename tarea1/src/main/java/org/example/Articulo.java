@@ -5,9 +5,11 @@ public class Articulo {
     private String nombre;
     private String descripcion;
     private float precio;
-    public Articulo() {
-        nombre = new String();
-        descripcion = new String();
+    public Articulo(String nombre, String descripcion, float peso, float precio) {
+        this.nombre = new String(nombre);
+        this.descripcion = new String(descripcion);
+        this.peso = peso;
+        this.precio = precio;
     }
 
     public float getPeso() {

@@ -2,7 +2,7 @@ package org.example;
 
 public class Direccion {
     private String direccion;
-    public Direccion() {
-        direccion = new String();
+    public Direccion(String direccion) {
+        this.direccion = new String(direccion);
     }
 }
