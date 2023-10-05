@@ -4,6 +4,7 @@ public class Articulo {
     private float peso;
     private String nombre;
     private String descripcion;
+    private DetalleOrden detalle;
     private float precio;
     public Articulo(String nombre, String descripcion, float peso, float precio) {
         this.nombre = new String(nombre);
