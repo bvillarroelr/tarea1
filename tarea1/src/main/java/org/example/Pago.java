@@ -8,4 +8,7 @@ public class Pago {
     public Pago(){
         fecha = new Date();
     }
+    public float getMonto() {
+        return monto;
+    }
 }
