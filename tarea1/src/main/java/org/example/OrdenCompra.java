@@ -3,9 +3,6 @@ package org.example;
 import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.Date;
-// Falta ver como crear correctamente los objetos, y ver como funcionarán los parámetros del constructor.
-// También, OrdenCompra debe tener la suma total de los precios dependiendo de LOS articulos que vaya a comprar el cliente
-// OrdenCompra : métodos deben devolver suma de todos los precios. DetalleOrden: precio articulo * cantidad.
 public class OrdenCompra {
     private Date fecha;
     private String estado;
@@ -19,17 +16,31 @@ public class OrdenCompra {
     }
     public float calcPrecioSinIVA() {
         float sumaPrecios = 0;
-        listaDetalles.size();
-        return 0;
+        for(int i = 0; i<listaDetalles.size(); i++) {
+            sumaPrecios = sumaPrecios + listaDetalles.get(i).calcPrecioSinIVA();
+        }
+        return sumaPrecios;
     }
     public float calcIVA() {
-        return 0;
+        float sum = 0;
+        for(int i = 0; i<listaDetalles.size(); i++) {
+            sum = sum + listaDetalles.get(i).calcPrecioSinIVA();
+        }
+        return sum * 0.19f;
     }
     public float calcPrecio() {
-        return 0;
+        float sumaPrecios = 0;
+        for(int i = 0; i<listaDetalles.size(); i++) {
+            sumaPrecios = sumaPrecios + listaDetalles.get(i).calcPrecio();
+        }
+        return sumaPrecios;
     }
     public float calcPeso() {
-        return 0;
+        float pesoTotal = 0;
+        for(int i = 0; i<listaDetalles.size(); i++) {
+            pesoTotal = pesoTotal + listaDetalles.get(i).calcPeso();
+        }
+        return pesoTotal;
     }
     public void addDetalle(DetalleOrden detalle) {
         listaDetalles.add(detalle);

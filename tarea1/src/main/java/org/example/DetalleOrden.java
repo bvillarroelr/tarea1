@@ -4,27 +4,27 @@ import java.util.ArrayList;
 
 public class DetalleOrden {
     private int cantidad;
-    private ArrayList<Articulo> listaArticulos;
+    private Articulo articulo;
     private OrdenCompra orden;
     public DetalleOrden(int cantidad, Articulo articulo){
         this.cantidad = cantidad;
-        listaArticulos.add(articulo);
+        this.articulo = articulo;
     }
-    public float calcPrecio(Articulo a) {
-        float precio = a.getPrecio();
+    public float calcPrecio() {
+        float precio = articulo.getPrecio();
         precio = precio * 1.19f;
         return precio;
     }
-    public float calcPrecioSinIVA(Articulo a) {
-        float precio = a.getPrecio() * cantidad;
+    public float calcPrecioSinIVA() {
+        float precio = articulo.getPrecio() * cantidad;
         return precio;
     }
-    public float calcIVA(Articulo a) {
-        float iva = a.getPrecio() * 0.19f;
+    public float calcIVA() {
+        float iva = articulo.getPrecio() * 0.19f;
         return iva;
     }
-    public float calcPeso(Articulo a) {
-        float peso = a.getPeso() * this.cantidad;
+    public float calcPeso() {
+        float peso = articulo.getPeso() * this.cantidad;
         return peso;
     }
     public int getCantidad() {
