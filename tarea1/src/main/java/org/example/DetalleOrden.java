@@ -1,19 +1,22 @@
 package org.example;
 
+import java.util.ArrayList;
+
 public class DetalleOrden {
     private int cantidad;
-    private Articulo articulo;
+    private ArrayList<Articulo> listaArticulos;
+    private OrdenCompra orden;
     public DetalleOrden(int cantidad, Articulo articulo){
         this.cantidad = cantidad;
-        this.articulo = articulo;
+        listaArticulos.add(articulo);
     }
-    public float calcPrecio() {
-        float precio = articulo.getPrecio();
+    public float calcPrecio(Articulo a) {
+        float precio = a.getPrecio();
         precio = precio * 1.19f;
         return precio;
     }
-    public float calcPrecioSinIVA() {
-        float precio = articulo.getPrecio() * cantidad;
+    public float calcPrecioSinIVA(Articulo a) {
+        float precio = a.getPrecio() * cantidad;
         return precio;
     }
     public float calcIVA(Articulo a) {
@@ -29,11 +32,5 @@ public class DetalleOrden {
     }
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
-    }
-    public Articulo getArticulo() {
-        return articulo;
-    }
-    public void setArticulo(Articulo articulo) {
-        this.articulo = articulo;
     }
 }
