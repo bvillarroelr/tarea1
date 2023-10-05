@@ -1,10 +1,8 @@
 package org.example;
 
 public class Efectivo extends Pago {
-    public Efectivo() {
-        ;
-    }
-    public int calcDevolucion() {
+    public float Efectivo;
+    public float calcDevolucion() {
         return 0;
     }
 }
