@@ -7,4 +7,7 @@ public class Cliente {
         this.nombre = new String(nombre);
         this.rut = new String(rut);
     }
+    public String ToString() {
+        return "Cliente: " + nombre, "RUT: " + rut;
+    }
 }

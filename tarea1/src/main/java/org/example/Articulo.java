@@ -20,4 +20,8 @@ public class Articulo {
     public float getPrecio() {
         return precio;
     }
+
+    public String ToString() {
+        return "Nombre: " + nombre, "Descripción: " + descripcion, "Peso: " + peso, "Precio: " + precio;
+    }
 }

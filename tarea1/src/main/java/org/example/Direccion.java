@@ -5,4 +5,7 @@ public class Direccion {
     public Direccion(String direccion) {
         this.direccion = new String(direccion);
     }
+    public string toString() {
+        return direccion;
+    }
 }
