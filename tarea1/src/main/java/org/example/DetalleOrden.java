@@ -33,4 +33,8 @@ public class DetalleOrden {
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
+
+    public String ToString() {
+        return "Articulo: "articulo + ", Cantidad:" + cantidad;
+    }
 }

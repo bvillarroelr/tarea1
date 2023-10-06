@@ -57,4 +57,8 @@ public class OrdenCompra {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+
+    public String ToString() {
+        return "Fecha: " + fecha + ", Estado: " + estado + "Pago: " + pago;
+    }
 }
