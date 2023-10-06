@@ -1,6 +1,16 @@
 package org.example;
+import org.example.Articulo;
+import org.example.OrdenCompra;
+import org.example.Cliente;
+import org.example.Direccion;
+import org.example.Pago;
+import org.example.DocTributario;
+import org.example.DetalleOrden;
+
 
 import javax.print.Doc;
+import java.awt.image.AreaAveragingScaleFilter;
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Date;
 public class OrdenCompra {
@@ -11,8 +21,13 @@ public class OrdenCompra {
     private DocTributario docTributario;
     private Cliente cliente;
     private DocTributario documento;
-    public OrdenCompra(Cliente cliente) {
+    public OrdenCompra(Cliente cliente, String estado,Pago pago) {
         this.cliente = cliente;
+        this.estado = estado;
+        this.pago = pago;
+        fecha = new Date();
+        listaDetalles = new ArrayList<>();
+
     }
     public float calcPrecioSinIVA() {
         float sumaPrecios = 0;
@@ -59,6 +74,10 @@ public class OrdenCompra {
     }
 
     public String ToString() {
-        return "Fecha: " + fecha + ", Estado: " + estado + "Pago: " + pago;
+        String s = "Fecha: " + fecha + ", Estado: " + estado + " Pago: [" + pago.ToString() + "]";
+        for(int i=0;i<listaDetalles.size();i++) {
+            s += "\n     " + listaDetalles.get(i).ToString();
+        }
+        return s;
     }
 }

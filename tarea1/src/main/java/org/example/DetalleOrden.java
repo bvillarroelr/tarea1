@@ -1,6 +1,12 @@
 package org.example;
 
 import java.util.ArrayList;
+import org.example.Articulo;
+import org.example.OrdenCompra;
+import org.example.Cliente;
+import org.example.Pago;
+import org.example.DocTributario;
+import org.example.DetalleOrden;
 
 public class DetalleOrden {
     private int cantidad;
@@ -35,6 +41,6 @@ public class DetalleOrden {
     }
 
     public String ToString() {
-        return "Articulo: "articulo + ", Cantidad:" + cantidad;
+        return "Articulo: [" + articulo.ToString() + "] , Cantidad:" + cantidad;
     }
 }

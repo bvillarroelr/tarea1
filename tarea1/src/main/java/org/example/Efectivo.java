@@ -1,11 +1,16 @@
 package org.example;
-
-public class Efectivo extends Pago {
+import org.example.Pago;
+    public class Efectivo extends Pago {
     public float efectivo;
-    public float calcDevolucion() {
+
+        public Efectivo(float monto) {
+            super(monto);
+        }
+
+        public float calcDevolucion() {
         return efectivo - getMonto();
     }
     public String ToString() {
-        return efectivo;
+        return "" + efectivo;
     }
 }

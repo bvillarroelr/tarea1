@@ -1,4 +1,9 @@
 package org.example;
+import org.example.Articulo;
+import org.example.OrdenCompra;
+import org.example.Pago;
+import org.example.DocTributario;
+import org.example.DetalleOrden;
 
 public class Articulo {
     private float peso;
@@ -22,6 +27,6 @@ public class Articulo {
     }
 
     public String ToString() {
-        return "Nombre: " + nombre, "Descripción: " + descripcion, "Peso: " + peso, "Precio: " + precio;
+        return nombre + " , Descripcion: " + descripcion + " , Peso: " + peso + " , Precio: " + precio;
     }
 }
