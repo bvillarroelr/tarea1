@@ -40,7 +40,7 @@ public class DetalleOrden {
         this.cantidad = cantidad;
     }
 
-    public String ToString() {
-        return "Articulo: [" + articulo.ToString() + "] , Cantidad:" + cantidad;
+    public String toString() {
+        return "Articulo: [" + articulo.toString() + "] , Cantidad:" + cantidad;
     }
 }

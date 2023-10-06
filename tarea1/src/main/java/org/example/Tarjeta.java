@@ -7,7 +7,7 @@ public class Tarjeta {
         tipo = new String();
         numTransaccion = new String();
     }
-    public String ToString() {
+    public String toString() {
         return tipo + ", " + numTransaccion;
     }
 }

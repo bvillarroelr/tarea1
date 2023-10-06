@@ -10,7 +10,7 @@ import org.example.Pago;
         public float calcDevolucion() {
         return efectivo - getMonto();
     }
-    public String ToString() {
+    public String toString() {
         return "" + efectivo;
     }
 }

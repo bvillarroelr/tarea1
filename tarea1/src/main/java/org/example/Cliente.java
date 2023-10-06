@@ -13,7 +13,7 @@ public class Cliente {
         this.direccion = direccion;
 
     }
-    public String ToString() {
-        return "Cliente: " + nombre + " RUT: " + rut + " Direccion: " + direccion.ToString();
+    public String toString() {
+        return "Cliente: " + nombre + " RUT: " + rut + " Direccion: " + direccion.toString();
     }
 }

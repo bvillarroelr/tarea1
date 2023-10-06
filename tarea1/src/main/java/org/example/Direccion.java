@@ -5,7 +5,7 @@ public class Direccion {
     public Direccion(String direccion) {
         this.direccion = new String(direccion);
     }
-    public String ToString() {
+    public String toString() {
         return direccion;
     }
 }

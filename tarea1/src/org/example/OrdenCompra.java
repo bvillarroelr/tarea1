@@ -73,10 +73,10 @@ public class OrdenCompra {
         this.estado = estado;
     }
 
-    public String ToString() {
-        String s = "Fecha: " + fecha + ", Estado: " + estado + " Pago: [" + pago.ToString() + "]";
+    public String toString() {
+        String s = "Orden de compra, Fecha: " + fecha + ", Estado: " + estado + " Pago: [" + pago.toString() + "]";
         for(int i=0;i<listaDetalles.size();i++) {
-            s += "\n     " + listaDetalles.get(i).ToString();
+            s += "\n     " + listaDetalles.get(i).toString();
         }
         return s;
     }

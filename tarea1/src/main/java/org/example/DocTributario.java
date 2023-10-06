@@ -11,7 +11,7 @@ public class DocTributario {
         numero = new String();
         fecha = new Date();
     }
-    public String ToString() {
+    public String toString() {
         return "numero: " + numero + ", RUT: " + rut + ", Fecha: " + fecha;
     }
 }

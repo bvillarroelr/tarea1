@@ -12,7 +12,7 @@ public class Pago {
     public float getMonto() {
         return monto;
     }
-    public String ToString() {
+    public String toString() {
         return "monto:" + monto + " fecha: " + fecha;
     }
 }

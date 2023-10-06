@@ -7,7 +7,7 @@ public class Transferencia {
         banco = new String();
         numCuenta = new String();
     }
-    public String ToString() {
+    public String toString() {
         return banco + "," + numCuenta;
     }
 }

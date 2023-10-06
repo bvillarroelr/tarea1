@@ -26,7 +26,7 @@ public class Articulo {
         return precio;
     }
 
-    public String ToString() {
+    public String toString() {
         return nombre + " , Descripcion: " + descripcion + " , Peso: " + peso + " , Precio: " + precio;
     }
 }
