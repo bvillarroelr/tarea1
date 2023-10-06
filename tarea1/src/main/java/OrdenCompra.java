@@ -1,16 +1,3 @@
-package org.example;
-import org.example.Articulo;
-import org.example.OrdenCompra;
-import org.example.Cliente;
-import org.example.Direccion;
-import org.example.Pago;
-import org.example.DocTributario;
-import org.example.DetalleOrden;
-
-
-import javax.print.Doc;
-import java.awt.image.AreaAveragingScaleFilter;
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Date;
 public class OrdenCompra {

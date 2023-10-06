@@ -1,9 +1,3 @@
-package org.example;
-import org.example.Articulo;
-import org.example.OrdenCompra;
-import org.example.Pago;
-import org.example.DocTributario;
-import org.example.DetalleOrden;
 
 public class Articulo {
     private float peso;

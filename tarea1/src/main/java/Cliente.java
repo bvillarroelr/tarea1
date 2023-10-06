@@ -1,7 +1,4 @@
-package org.example;
-import org.example.Direccion;
-import java.util.ArrayList;
-import org.example.Direccion;
+
 
 public class Cliente {
     private String nombre;

@@ -1,5 +1,3 @@
-package org.example;
-
 public class Direccion {
     private String direccion;
     public Direccion(String direccion) {

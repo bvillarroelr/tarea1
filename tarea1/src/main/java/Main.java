@@ -1,12 +1,4 @@
-package main.java.org.example;
-import org.example.Articulo;
-import org.example.OrdenCompra;
-import org.example.Cliente;
-import org.example.Direccion;
-import org.example.DetalleOrden;
-import org.example.Pago;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
