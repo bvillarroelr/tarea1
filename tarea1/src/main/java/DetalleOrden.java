@@ -32,6 +32,6 @@ public class DetalleOrden {
     }
 
     public String toString() {
-        return "Articulo: [" + articulo.toString() + "] , Cantidad:" + cantidad;
+        return articulo.toString() + "] , Cantidad:" + cantidad;
     }
 }
