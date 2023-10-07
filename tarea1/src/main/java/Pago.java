@@ -6,6 +6,7 @@ public class Pago {
     private Date fecha;
     public Pago(float monto){
         this.monto = monto;
+        this.fecha = new Date();
     }
     public float getMonto() {
         return monto;
