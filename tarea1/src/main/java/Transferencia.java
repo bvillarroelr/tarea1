@@ -1,13 +1,12 @@
-package main.java;
-
-public class Transferencia {
+public class Transferencia extends Pago {
     private String banco;
     private String numCuenta;
-    public Transferencia() {
-        banco = new String();
-        numCuenta = new String();
+    public Transferencia(float monto, String banco, String numCuenta) {
+        super(monto);
+        this.banco = banco;
+        this.numCuenta = numCuenta;
     }
     public String toString() {
-        return banco + "," + numCuenta;
+        return "monto: " + getMonto() + ", fecha: " + getFecha() + ", " + banco + ", " + numCuenta;
     }
 }

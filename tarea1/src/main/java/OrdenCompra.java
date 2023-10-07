@@ -4,16 +4,15 @@ public class OrdenCompra {
     private Date fecha;
     private String estado;
     private ArrayList<DetalleOrden> listaDetalles;
-    private Pago pago;
-    private DocTributario docTributario;
+    private ArrayList<Pago> listaPagos;
     private Cliente cliente;
     private DocTributario documento;
-    public OrdenCompra(Cliente cliente, String estado,Pago pago) {
+    public OrdenCompra(Cliente cliente, String estado,Pago pago,DocTributario documento) {
         this.cliente = cliente;
         this.estado = estado;
-        this.pago = pago;
         fecha = new Date();
         listaDetalles = new ArrayList<>();
+        listaPagos = new ArrayList<>();
 
     }
     public float calcPrecioSinIVA() {
@@ -47,6 +46,18 @@ public class OrdenCompra {
     public void addDetalle(DetalleOrden detalle) {
         listaDetalles.add(detalle);
     }
+
+    public void addPago(Pago pago) {
+        listaPagos.add(pago);
+
+    }
+    public float sumPagos() {
+        float pagado = 0;
+        for(int i = 0; i<listaPagos.size(); i++) {
+            pagado += listaPagos.get(i).getMonto();
+        }
+        return pagado;
+    }
     public Date getFecha() {
         return fecha;
     }
@@ -61,10 +72,15 @@ public class OrdenCompra {
     }
 
     public String toString() {
-        String s = "Estado: " + estado + ", Pago: [" + pago.toString() + "]";
+        String s = "Estado: " + estado;
+        String p = "Pagos:";
         for(int i=0;i<listaDetalles.size();i++) {
             s += "\n     " + (i+1) + ".- " + listaDetalles.get(i).toString();
         }
-        return s;
+        //Historial de pagos:
+        for(int i=0;i<listaPagos.size();i++) {
+            p += "\n     " + listaPagos.get(i).toString();
+        }
+        return s + "\n" + p;
     }
 }

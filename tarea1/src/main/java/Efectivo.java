@@ -1,14 +1,12 @@
 
 public class Efectivo extends Pago {
-    public float efectivo;
-
     public Efectivo(float monto) {
             super(monto);
     }
-    public float calcDevolucion() {
-        return efectivo - getMonto();
+    public float calcDevolucion(float precio) {
+        return getMonto() - precio;
     }
     public String toString() {
-        return "" + efectivo;
+        return "" + getMonto();
     }
 }
