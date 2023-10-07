@@ -10,10 +10,10 @@ public class Main {
         Direccion D1 = new Direccion("Calle Falsa 123");
         Direccion D2 = new Direccion("308 Negra Arroyo Lane, Albuquerque, New Mexico, 87104");
 
-        Tarjeta P1 = new Tarjeta(5000,"Credito","85623785623");
-        Tarjeta P2 = new Tarjeta(100000,"Debito","53723958237");
+        Tarjeta P1 = new Tarjeta(5000,fecha,"Credito","85623785623");
+        Tarjeta P2 = new Tarjeta(100000,fecha,"Debito","53723958237");
         Efectivo P3 = new Efectivo(10000);
-        Transferencia P4 = new Transferencia(2000,"BancoEstado","213458760k");
+        Transferencia P4 = new Transferencia(2000,fecha,"BancoEstado","213458760k");
 
         Cliente C1 = new Cliente("Patrick Bateman","19884864-6",D1);
         Cliente C2 = new Cliente("Walter White","20326142-k",D2);
@@ -66,18 +66,20 @@ public class Main {
         O3.addPago(P4);
 
         System.out.println(O1 + "\n");
-        System.out.println("Precio total (Sin IVA): " + O1.calcPrecio());
-        System.out.println("Precio Real (Con IVA): " + (O1.calcIVA()) + O1.calcPrecio());
+        System.out.println("Precio total (Sin IVA): " + O1.calcPrecioSinIVA());
+        System.out.println("Precio Real (Con IVA): " + (O1.calcIVA()+O1.calcPrecioSinIVA()));
         System.out.println("Peso Total (kg): " + O1.calcPeso() + "\n");
 
         System.out.println(O2 + "\n");
-        System.out.println("Precio total (Sin IVA): " + O2.calcPrecio());
-        System.out.println("Precio Real (Con IVA): " + (O2.calcIVA()) + O2.calcPrecio());
+        System.out.println("Precio total (Sin IVA): " + O2.calcPrecioSinIVA());
+        System.out.println("Precio Real (Con IVA): " + (O2.calcIVA()+O2.calcPrecioSinIVA()));
         System.out.println("Peso Total (kg): " + O2.calcPeso() + "\n");
 
+        System.out.println("Vuelto" + P3.calcDevolucion(O2));
+
         System.out.println(O3 + "\n");
-        System.out.println("Precio total (Sin IVA): " + O3.calcPrecio());
-        System.out.println("Precio Real (Con IVA): " + (O3.calcIVA()) + O3.calcPrecio());
+        System.out.println("Precio total (Sin IVA): " + O3.calcPrecioSinIVA());
+        System.out.println("Precio Real (Con IVA): " + (O3.calcIVA()+O3.calcPrecioSinIVA()));
         System.out.println("Peso Total (kg): " + O3.calcPeso() + "\n");
 
     }

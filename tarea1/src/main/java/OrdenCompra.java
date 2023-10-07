@@ -34,7 +34,10 @@ public class OrdenCompra {
         for(int i = 0; i<listaDetalles.size(); i++) {
             sumaPrecios = sumaPrecios + listaDetalles.get(i).calcPrecio();
         }
-        return sumaPrecios;
+        return sumaPrecios * 1.19f;
+    }
+    public float getPrecio() {
+        return calcPrecio();
     }
     public float calcPeso() {
         float pesoTotal = 0;
@@ -50,13 +53,6 @@ public class OrdenCompra {
     public void addPago(Pago pago) {
         listaPagos.add(pago);
 
-    }
-    public float sumPagos() {
-        float pagado = 0;
-        for(int i = 0; i<listaPagos.size(); i++) {
-            pagado += listaPagos.get(i).getMonto();
-        }
-        return pagado;
     }
     public Date getFecha() {
         return fecha;
